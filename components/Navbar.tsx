@@ -18,7 +18,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity">
@@ -40,7 +40,7 @@ export default function Navbar() {
               {pathname === link.href && (
                 <motion.div
                   layoutId="underline"
-                  className="absolute -bottom-[21px] left-0 right-0 h-[1px] bg-primary"
+                  className="absolute -bottom-[21px] left-0 right-0 h-[0px] bg-primary"
                 />
               )}
             </Link>

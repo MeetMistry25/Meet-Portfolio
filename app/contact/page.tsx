@@ -11,9 +11,8 @@ export default function ContactPage() {
                 <div>
                     <h1 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h1>
                     <p className="text-zinc-400 text-lg mb-12 leading-relaxed">
-                        I'm currently responsible for building the frontend of a stealth startup.
-                        However, I'm always open to discussing new projects, creative ideas,
-                        or opportunities to be part of your visions.
+                        I am currently a Web Development Intern at Outamation Technologies and a final-year Computer Engineering student.
+                        I am passionate about building full-stack solutions and always open to discussing new projects and opportunities.
                     </p>
 
                     <div className="space-y-8">
