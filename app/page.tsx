@@ -3,6 +3,8 @@ import FeaturedProjects from "@/components/FeaturedProjects";
 import Skills from "@/components/Skills";
 import Timeline from "@/components/Timeline";
 import CallToAction from "@/components/CallToAction";
+import About from "@/components/About";
+import KeyAchievements from "@/components/KeyAchievements";
 import { supabase } from "@/Lib/supabase";
 import { MOCK_PROJECTS } from "@/Lib/data";
 import { Project } from "@/Lib/types";
@@ -35,8 +37,10 @@ export default async function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Hero />
-      <FeaturedProjects projects={projects} />
+      <About />
       <Skills />
+      <KeyAchievements />
+      <FeaturedProjects projects={projects} />
       <Timeline />
       <CallToAction />
     </div>

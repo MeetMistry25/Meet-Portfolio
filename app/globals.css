@@ -5,22 +5,34 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  
+
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
-  
+
   --animate-fade-in: fade-in 0.5s ease-out;
   --animate-slide-up: slide-up 0.5s ease-out;
-  
+
   @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
-  
+
   @keyframes slide-up {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }
 
@@ -28,13 +40,20 @@
   /* Default to Dark Mode */
   --background: #050505;
   --foreground: #ffffff;
-  
-  --primary: #3b82f6; /* Blue widely used in tech, or can use white/gray for monochrome */
-  --secondary: #a1a1aa; /* Zinc 400 */
-  --accent: #8b5cf6; /* Violet */
-  
+
+  --primary: #3b82f6;
+  /* Blue widely used in tech, or can use white/gray for monochrome */
+  --secondary: #a1a1aa;
+  /* Zinc 400 */
+  --accent: #8b5cf6;
+  /* Violet */
+
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-bg: rgba(10, 10, 10, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -78,5 +97,5 @@ body {
   height: 100%;
   z-index: -1;
   background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15), transparent 40%),
-              radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1), transparent 30%);
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1), transparent 30%);
 }

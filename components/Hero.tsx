@@ -1,51 +1,72 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowRight, Github, Linkedin, Download, Terminal } from "lucide-react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden">
-            <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="z-10 max-w-4xl"
-            >
-                <h2 className="text-sm md:text-base font-semibold tracking-wider text-primary uppercase mb-4">
-                    Hello, I'm Meetkumar Mistry
-                </h2>
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-                    Building Scalable <br />
-                    <span className="text-primary">Full Stack Solutions</span>
-                </h1>
-                <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10">
-                    Specializing in Angular, ASP.NET Core, and the MERN Stack.
-                    Crafting secure, high-performance web applications with a focus on modern architecture.
-                </p>
+        <section className="relative min-h-[90vh] flex flex-col justify-center px-6 pt-20">
+            <div className="absolute inset-0 z-0 overflow-hidden">
+                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl delay-1000 animate-pulse" />
+            </div>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <Link
-                        href="/projects"
-                        className="group relative px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all flex items-center gap-2"
-                    >
-                        View Projects
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        <div className="absolute inset-0 rounded-full bg-white/20 blur-lg group-hover:blur-xl transition-all opacity-0 group-hover:opacity-100" />
-                    </Link>
+            <div className="max-w-5xl mx-auto z-10 w-full">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <div className="flex items-center gap-2 mb-6">
+                        <span className="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium flex items-center gap-2">
+                            <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                            Available for Full-Time Roles
+                        </span>
+                    </div>
 
-                    <Link
-                        href="/contact"
-                        className="px-8 py-3 bg-white/5 border border-white/10 text-white font-semibold rounded-full hover:bg-white/10 transition-all"
-                    >
-                        Contact Me
-                    </Link>
-                </div>
-            </motion.div>
+                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
+                        Building Scalable <br />
+                        <span className="text-gradient">Secure Web Systems.</span>
+                    </h1>
 
-            {/* Decorative gradient overlay */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] -z-10" />
+                    <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl mb-8 leading-relaxed">
+                        Full Stack Developer specializing in <span className="text-white font-medium">ASP.NET Core</span>, <span className="text-white font-medium">Angular</span>, and <span className="text-white font-medium">MERN</span>.
+                        I engineer high-performance backends and intuitive interfaces for enterprise-grade applications.
+                    </p>
+
+                    <div className="flex flex-wrap gap-4 mb-12">
+                        <Link
+                            href="#projects"
+                            className="px-8 py-4 bg-white text-black rounded-lg font-semibold hover:bg-zinc-200 transition-all flex items-center gap-2"
+                        >
+                            View Projects <ArrowRight size={20} />
+                        </Link>
+
+                        <a
+                            href="/Meetkumar Mistry_CV.pdf"
+                            download
+                            className="px-8 py-4 glass-card rounded-lg font-semibold hover:bg-white/10 transition-all flex items-center gap-2"
+                        >
+                            Download Resume <Download size={20} />
+                        </a>
+
+                        <div className="flex items-center gap-4 ml-2">
+                            <Link href="https://github.com/MeetMistry25" target="_blank" className="p-4 glass-card rounded-lg hover:text-primary transition-colors hover:-translate-y-1">
+                                <Github size={24} />
+                            </Link>
+                            <Link href="https://www.linkedin.com/in/meet-mistry-25092004m" target="_blank" className="p-4 glass-card rounded-lg hover:text-primary transition-colors hover:-translate-y-1">
+                                <Linkedin size={24} />
+                            </Link>
+                        </div>
+                    </div>
+
+
+                </motion.div>
+            </div>
         </section>
     );
 }

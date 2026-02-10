@@ -6,5 +6,12 @@ export interface Project {
     image: string;
     github?: string;
     demo?: string;
-    category?: string; // For filtering
+    category?: string;
+    problemStatement?: string;
+    role?: string;
+    architecture?: string;
+    keyFeatures?: string[];
+    challengesSolved?: string[];
+    securityImplementations?: string[];
+    whatILearned?: string[];
 }

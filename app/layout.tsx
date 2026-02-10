@@ -7,20 +7,33 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"], variable: "--font-geist-sans" });
 
 export const metadata: Metadata = {
-  title: "Meetkumar Mistry | Full Stack Developer",
-  description: "Portfolio of Meetkumar Mistry, showcasing projects in Full Stack Development.",
+  title: "Meetkumar Mistry | ASP.NET Core & Angular Full Stack Developer",
+  description: "Portfolio of Meetkumar Mistry, a backend-focused Full Stack Developer specializing in secure, scalable web systems using Angular, ASP.NET Core, and MERN stack.",
+  keywords: ["Full Stack Developer", "ASP.NET Core Developer", "Angular Developer", "MERN Stack", "Backend Engineer", "Software Engineer", "Web Development", "Secure Web Applications", "REST API Development"],
   openGraph: {
-    title: "Meetkumar Mistry | Full Stack Developer",
-    description: "Portfolio of Meetkumar Mistry, showcasing projects in Full Stack Development.",
+    title: "Meetkumar Mistry | ASP.NET Core & Angular Full Stack Developer",
+    description: "Building scalable, secure, and production-ready web applications with modern architecture.",
     type: "website",
     locale: "en_US",
     url: "https://meet-portfolio.vercel.app",
     siteName: "Meetkumar Mistry",
+    images: [
+      {
+        url: "/og-image.png", // Ensure this exists or is a placeholder
+        width: 1200,
+        height: 630,
+        alt: "Meetkumar Mistry Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Meetkumar Mistry | Full Stack Developer",
-    description: "Portfolio of Meetkumar Mistry.",
+    description: "Building scalable, secure, and production-ready web applications.",
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico", // Ensure this path is correct if favicon exists
   },
 };
 
